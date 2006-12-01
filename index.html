@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Infernal: inference of RNA alignments</title>
+<link rel="stylesheet" href="infernal.css" type="text/css" media="screen">
+</head>
+
+
+
+<body>
+<table width="100%">
+<tr>
+ <td align="center">  <img src="infernal-102x149.png"> </td>
+ <td align="left" valign="bottom">
+    <h1>Infernal: inference of RNA alignments</h1>
+
+<div id="navbar">
+        <a href="http://infernal.janelia.org/">infernal home</a> |
+        <a href="http://rfam.janelia.org/">rfam database</a> |
+        <a href="http://selab.janelia.org/">eddy lab</a> |
+        <a href="http://www.hhmi.org/janelia/">janelia farm</a> 
+</div>
+  </td>
+</tr></table>
+
+
+
+
+<h2> Overview </h2>
+
+<p>
+Infernal ("INFERence of RNA ALignment") is for searching DNA sequence
+databases for RNA structure and sequence similarities. It is an
+implementation of a special case of profile stochastic context-free
+grammars called <em>covariance models</em> (CMs). A CM is like a sequence profile,
+but it scores a combination of sequence consensus and RNA secondary structure
+consensus, so in many cases, it is more capable of identifying RNA homologs
+that conserve their secondary structure more than their primary sequence.
+</p>
+<p>
+The latest release of Infernal is 0.71 [30 November 2006].
+</p>
+
+
+
+
+<h2> Documentation: </h2>
+<ul>
+ <li> <a href="ftp://selab.janelia.org/pub/software/infernal/Userguide.pdf">
+      User's Guide [PDF, 45 pages] </a>.
+
+ <li> <a href="ftp://selab.janelia.org/pub/software/infernal/00README">
+      00README </a>
+      from the current release.
+</ul>
+
+
+
+
+
+<h2> Download: </h2>
+
+<ul>
+  <li> The current source code distribution:
+       <a href="ftp://selab.janelia.org/pub/software/infernal/infernal.tar.gz">
+       infernal 0.71 [tarball, 6.0 MB] </a> <br />
+       Infernal is 
+       <a href="ftp://selab.janelia.org/pub/software/infernal/COPYRIGHT">
+       freely available </a> under the
+       <a href="ftp://selab.janelia.org/pub/software/infernal/LICENSE"> GPL </a>.
+</ul>
+
+
+
+
+
+<h2> Archived releases: </h2>
+
+<p>
+For reproducibility of published results, we have archived several older versions:
+</p>
+
+<table>
+<tr> <th width=50px> Release </th>  <th width=100px> Date </th>  <th width=180px> Download </th>  <th> Notes </th> </tr>
+<tr> <th> 0.1        </th>
+     <td> April 2002 </td>
+     <td> <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.1.tar.gz">
+          [infernal-0.1.tar.gz, 402 KB] </a>
+     </td>
+     <td> Version used in the divide and conquer algorithm paper
+          <a href="http://selab.janelia.org/publications.html#Eddy02b">
+          (Eddy, 2002)</a>
+     </td>
+</tr>
+
+<tr> <th> 0.3       </th>
+     <td> July 2002 </td>
+     <td> <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.3.tar.gz">
+          [infernal-0.3.tar.gz, 431 KB] </a>
+     </td>
+     <td> Version used for the first Rfam release
+          <a href="http://selab.janelia.org/publications.html#Griffiths-Jones03">
+          (Griffiths-Jones et al, 2003) </a>
+     </td>    
+</tr>
+
+<tr> <th> 0.4         </th>
+     <td> August 2002 </td>
+     <td> <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.4.tar.gz">
+          [infernal-0.4.tar.gz, 443 KB] </a>
+     </td>
+     <td> cmalign first appears, and was used for final work on Rfam 1.0.
+     </td>    
+</tr>
+
+<tr> <th> 0.55        </th>
+     <td> April 2003  </td>
+     <td> <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.55.tar.gz">
+          [infernal-0.55.tar.gz, 763 KB] </a>
+     </td>
+     <td> First version with documentation. Rfam 2.0 through Rfam 7.0 are based
+          on 0.5x code
+          <a href="http://selab.janelia.org/publications.html#Griffiths-Jones05">
+          (Griffiths-Jones et al, 2005) </a>
+      </td>    
+</tr>
+
+<tr> <th> 0.6            </th>
+     <td> November 2005  </td>
+     <td> <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.6.tar.gz">
+          [infernal-0.6.tar.gz, 4.3 MB] </a>
+     </td>
+     <td> Mixture Dirichlets incorporated, under pressure from Paul Gardner and
+          Eva Freyhult's ongoing benchmarking work.
+     </td>    
+</tr>
+
+<tr> <th> 0.7            </th>
+     <td> December 2005  </td>
+     <td> <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.7.tar.gz">
+          [infernal-0.7.tar.gz, 4.3 MB] </a>
+     </td>
+     <td> Entropy weighting incorporated. This version was used by
+          Paul Gardner and Eva Freyhult in their
+          <a href="http://www.binf.ku.dk/~pgardner/bralibase/bralibase3/">
+          BRaliBaseIII</a> benchmark.
+     </td>    
+</tr>
+
+<tr> <th> 0.71           </th>
+     <td> November 2006  </td>
+     <td> <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.71.tar.gz">
+          [infernal-0.71.tar.gz, 5.9 MB] </a>
+     </td>
+     <td> Version used in the QDB algorithm paper 
+          <a href="http://selab.janelia.org/publications.html#NawrockiEddy07">
+          (Nawrocki and Eddy, 2006, submitted) </a>
+     </td>    
+</tr>
+</table>
+
+<h2> Further reference: </h2>
+
+<ul>
+ <li> Covariance models were originally described in
+      <a href="http://selab.janelia.org/publications.html#Eddy94">
+      (Eddy and Durbin, 1994)</a>. They were first implemented
+      in the
+      <a href="http://selab.janelia.org/software.html#cove">
+      COVE</a> software package.
+
+ <li> The tRNA identification program <a href="http://selab.janelia.org/software.html#trnascanse">
+      tRNAscan-SE</a> is based on a tRNA CM and COVE
+      <a href="http://selab.janelia.org/publications.html#LoweEddy97">
+      (Lowe and Eddy, 1997)</a>.
+
+ <li> A chapter of <cite>Biological Sequence Analysis</cite>
+      <a href="http://selab.janelia.org/publications.html#Durbin98">
+      (Durbin et al., 1998)</a> describes CMs in more detail.
+
+ <li> The memory-efficient divide-and-conquer CYK alignment algorithm is
+      described in
+      <a href="http://selab.janelia.org/publications.html#Eddy02b">
+      (Eddy, 2002)</a>. A new implementation, Infernal, replaced COVE.
+
+ <li> The
+      <a href="http://selab.janelia.org/software.html#rsearch">RSEARCH</a>
+      software for searching with single RNA structures (instead of with
+      profiles built from multiple alignments) is based on Infernal's
+      alignment engines
+      <a href="http://selab.janelia.org/publications.html#KleinEddy03">
+      (Klein and Eddy, 2003)</a>. RSEARCH also includes MPI parallelization
+      and E-value calculations, features that Infernal still lacks.
+
+ <li> The
+      <a href="http://rfam.janelia.org">Rfam database</a> of RNA families
+      is based on the Infernal software
+      <a href="http://selab.janelia.org/publications.html#Griffiths-Jones03">
+      (Griffiths-Jones, 2003; </a>
+      <a href="http://selab.janelia.org/publications.html#Griffiths-Jones05">
+       Griffiths-Jones, 2005)</a> .
+
+ <li> The QDB query-dependent banded dynamic programming algorithm used
+      to increase search speed is described in
+      <a href="http://selab.janelia.org/publications.html#NawrockiEddy07">
+      (Nawrocki and Eddy, submitted)</a>, along with
+      mixture Dirichlet priors and entropy weighting.
+</ul>      
+
+
+
+<h2> Road map </h2>
+
+<p>
+We plan to include the following features in future versions of Infernal:
+</p>
+
+<ul>
+  <li> E-values reporting the significance of hits
+  <li> MPI parallelization for clusters
+  <li> Better biased composition filters
+</ul>
+
+<p>
+Infernal remains too slow for many practical uses. Currently our main
+research effort is to develop faster algorithms.
+</p>
+
+<p>
+We welcome code contributions, feature requests, and bug reports. 
+</p>
+
+<hr>
+<table width="100%"><tr>
+ <td align="left">
+    <address><a href="http://selab.janelia.org/people/eddys/">Sean Eddy</a></address>
+    <!-- hhmts start -->
+Last modified: Fri Dec  1 11:22:29 2006
+<!-- hhmts end -->
+ </td>
+ <td align="right">  
+  <a href="http://www.hhmi.org/janelia/">  <img src="jfrclogo.gif" border="0">  </a>
+ </td>
+</tr></table>
+
+
+</body> </html>

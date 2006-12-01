@@ -1,0 +1,36 @@
+Web server for Infernal
+SRE, Thu Nov 30 11:20:54 2006
+
+"make test" installs in a test directory under my home dir:
+   http://selab.janelia.org/people/eddys/infernal/
+which is rooted at:
+   selab: /opt/www/people/eddys/infernal/
+
+"make" pushes files to the real web server, at
+    http://infernal.janelia.org
+which is rooted at:
+   selab: /opt/www/infernal/docs/
+
+
+This directory is maintained under Subversion control, at
+   https://svn.janelia.org/eddylab/eddys/web/infernal
+
+It was initially imported by
+   cd ..
+   svn import infernal https://svn.janelia.org/eddylab/eddys/web/infernal \
+         -m 'Added the infernal web page to Subversion control'
+   
+
+svn delete https://svn.janelia.org/eddylab/eddys/web/00README \
+           https://svn.janelia.org/eddylab/eddys/web/Makefile \
+           https://svn.janelia.org/eddylab/eddys/web/index.html \
+           https://svn.janelia.org/eddylab/eddys/web/infernal-102x149.png \
+           https://svn.janelia.org/eddylab/eddys/web/infernal-140x205.png \
+           https://svn.janelia.org/eddylab/eddys/web/infernal.ai \
+           https://svn.janelia.org/eddylab/eddys/web/infernal.css \
+           https://svn.janelia.org/eddylab/eddys/web/infernal.eml \
+           https://svn.janelia.org/eddylab/eddys/web/infernal_16x16.jpg \
+           https://svn.janelia.org/eddylab/eddys/web/infernal_32x32.jpg \
+           https://svn.janelia.org/eddylab/eddys/web/infernal_small.ai \
+           https://svn.janelia.org/eddylab/eddys/web/jfrclogo.gif
+
