@@ -13,6 +13,22 @@ which is rooted at:
 
 
 ################################################################
+# Making and testing a change
+################################################################
+
+  eval `ssh-agent`; ssh-add
+  svn update
+     [make edits]
+  make test
+     [test site is: http://selab.janelia.org/people/eddys/infernal/]
+  make
+     [real site is: http://infernal.janelia.org/]
+  make clean
+  svn commit
+
+
+
+################################################################
 # Subversion control
 ################################################################
 This directory is maintained under Subversion control, at
