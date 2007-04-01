@@ -13,6 +13,16 @@ which is rooted at:
 
 
 ################################################################
+# The infernal logo
+################################################################
+
+Infernal font is diagoth.TTF, obtained from David Deen, March 2007.
+
+infernal-102x149.png is generated from infernal.ai, in AI
+infernal-16x16.jpg is generated from infernal_small.ai, in AI
+
+
+################################################################
 # Making and testing a change
 ################################################################
 
