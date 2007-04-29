@@ -50,7 +50,7 @@ consensus, so in many cases, it is more capable of identifying RNA homologs
 that conserve their secondary structure more than their primary sequence.
 </p>
 <p>
-The latest release of Infernal is 0.72 [27 January 2007].
+The latest release of Infernal is 0.8 [29 April 2007].
 </p>
 
 
@@ -59,7 +59,7 @@ The latest release of Infernal is 0.72 [27 January 2007].
 <h2> Documentation: </h2>
 <ul>
  <li> <a href="ftp://selab.janelia.org/pub/software/infernal/Userguide.pdf">
-      User's Guide [PDF, 45 pages] </a>.
+      User's Guide [PDF, 59 pages] </a>.
 
  <li> <a href="ftp://selab.janelia.org/pub/software/infernal/00README">
       00README </a>
@@ -75,7 +75,7 @@ The latest release of Infernal is 0.72 [27 January 2007].
 <ul>
   <li> The current source code distribution:
        <a href="ftp://selab.janelia.org/pub/software/infernal/infernal.tar.gz">
-       infernal 0.72 [tarball, 6.0 MB] </a> <br />
+       infernal 0.8 [tarball, 6.5 MB] </a> <br />
        Infernal is 
        <a href="ftp://selab.janelia.org/pub/software/infernal/COPYRIGHT">
        freely available </a> under the
@@ -235,18 +235,11 @@ For reproducibility of published results, we have archived several older version
 <h2> Road map </h2>
 
 <p>
-We plan to include the following features in future versions of Infernal:
-</p>
-
-<ul>
-  <li> E-values reporting the significance of hits
-  <li> MPI parallelization for clusters
-  <li> Better biased composition filters
-</ul>
-
-<p>
-Infernal remains too slow for many practical uses. Currently our main
-research effort is to develop faster algorithms.
+The 0.8 release now includes all but a few smallish features that we
+consider to be necessary before declaring a 1.0 release, including
+E-values, MPI parallelization, and integration of Robbie Klein's
+RSEARCH program (which forked off of Infernal a few years ago). We
+anticipate a 1.0 release after some final cleanup.
 </p>
 
 <p>
@@ -258,7 +251,7 @@ We welcome code contributions, feature requests, and bug reports.
  <td align="left">
     <address><a href="http://selab.janelia.org/people/eddys/">Sean Eddy</a></address>
     <!-- hhmts start -->
-Last modified: Sat Jan 27 10:41:33 2007
+Last modified: Sun Apr 29 11:34:01 2007
 <!-- hhmts end -->
  </td>
  <td align="right">  

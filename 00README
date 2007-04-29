@@ -56,3 +56,4 @@ directory, then:
    svn checkout https://svn.janelia.org/eddylab/eddys/web/infernal infernal
    rm -rf infernal.old
 
+p
