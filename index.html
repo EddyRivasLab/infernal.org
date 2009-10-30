@@ -52,7 +52,7 @@ that conserve their secondary structure more than their primary sequence.
 <p>
 The latest release of Infernal is
 <a href="ftp://selab.janelia.org/pub/software/infernal/infernal.tar.gz">
-1.0 [13 Jan 2009].</a>
+1.0.2 [30 Oct 2009].</a>
 </p>
 
 
@@ -60,11 +60,15 @@ The latest release of Infernal is
 <h2> Documentation: </h2>
 <ul>
  <li> <a href="ftp://selab.janelia.org/pub/software/infernal/Userguide.pdf">
-      User's Guide [PDF, 106 pages] </a>.
+      User's Guide [PDF, 109 pages] </a>.
 
  <li> <a href="ftp://selab.janelia.org/pub/software/infernal/00README">
       00README </a>
       from the current release.
+
+  <li> <a href="ftp://selab.janelia.org/pub/software/infernal/00RELEASE">
+      Release notes </a>
+      for the current release.
 </ul>
 
 <h2> Reference: </h2>
@@ -83,13 +87,12 @@ The latest release of Infernal is
 <ul>
   <li> The current source code distribution:
        <a href="ftp://selab.janelia.org/pub/software/infernal/infernal.tar.gz">
-       infernal 1.0 [tarball, 15.0 MB] </a> <br />
+       infernal 1.0.2 [tarball, 15.2 MB] </a> <br />
        Infernal is 
        <a href="ftp://selab.janelia.org/pub/software/infernal/COPYRIGHT">
        freely available </a> under the
        GNU General Public License version 3
        <a href="ftp://selab.janelia.org/pub/software/infernal/LICENSE"> [GPLv3]</a>.
-       <p> 1.0 is (at long last) the first "complete" release of Infernal.  </p>
        <p> We welcome code contributions, feature requests, and bug reports. </p>
 </ul>
 
@@ -131,26 +134,28 @@ href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.81.tar.gz">Infern
 <h2> Further reference: </h2>
 
 <ul>
- <li> Covariance models were originally described in
-      <a href="http://selab.janelia.org/publications.html#Eddy94">
-      (Eddy and Durbin, 1994)</a>. They were first implemented
-      in the
-      <a href="http://selab.janelia.org/software.html#cove">
-      COVE</a> software package.
+ <li> Several improvements in Infernal 1.0, including techniques used
+      to improve speed performance, are described in
+      <a href="http://selab.janelia.org/publications.html#Nawrocki09b">
+      Eric Nawrocki's 2009 Ph.D. thesis</a>.
 
- <li> The tRNA identification program <a href="http://selab.janelia.org/software.html#trnascanse">
-      tRNAscan-SE</a> is based on a tRNA CM and COVE
-      <a href="http://selab.janelia.org/publications.html#LoweEddy97">
-      (Lowe and Eddy, 1997)</a>.
+ <li> The trCYK local alignment algorithm is described in
+      <a href="http://selab.janelia.org/publications.html#KolbeEddy09">
+      (Kolbe and Eddy, 2009)</a>.
 
- <li> A chapter of <cite>Biological Sequence Analysis</cite>
-      <a href="http://selab.janelia.org/publications.html#Durbin98">
-      (Durbin et al., 1998)</a> describes CMs in more detail.
+ <li> The QDB query-dependent banded dynamic programming algorithm used
+      to increase search speed is described in
+      <a href="http://selab.janelia.org/publications.html#NawrockiEddy07">
+      (Nawrocki and Eddy, 2007)</a>, along with
+      mixture Dirichlet priors and entropy weighting.
 
- <li> The memory-efficient divide-and-conquer CYK alignment algorithm is
-      described in
-      <a href="http://selab.janelia.org/publications.html#Eddy02b">
-      (Eddy, 2002)</a>. A new implementation, Infernal, replaced COVE.
+ <li> The
+      <a href="http://rfam.janelia.org">Rfam database</a> of RNA families
+      is based on the Infernal software
+      <a href="http://selab.janelia.org/publications.html#Griffiths-Jones03">
+      (Griffiths-Jones, 2003; </a>
+      <a href="http://selab.janelia.org/publications.html#Griffiths-Jones05">
+       Griffiths-Jones, 2005)</a> .
 
  <li> The
       <a href="http://selab.janelia.org/software.html#rsearch">RSEARCH</a>
@@ -162,19 +167,26 @@ href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.81.tar.gz">Infern
       and E-value calculations, features that were merged back into
       Infernal in Infernal 1.0.
 
- <li> The
-      <a href="http://rfam.janelia.org">Rfam database</a> of RNA families
-      is based on the Infernal software
-      <a href="http://selab.janelia.org/publications.html#Griffiths-Jones03">
-      (Griffiths-Jones, 2003; </a>
-      <a href="http://selab.janelia.org/publications.html#Griffiths-Jones05">
-       Griffiths-Jones, 2005)</a> .
+ <li> The memory-efficient divide-and-conquer CYK alignment algorithm is
+      described in
+      <a href="http://selab.janelia.org/publications.html#Eddy02b">
+      (Eddy, 2002)</a>. A new implementation, Infernal, replaced COVE.
+      
+ <li> A chapter of <cite>Biological Sequence Analysis</cite>
+      <a href="http://selab.janelia.org/publications.html#Durbin98">
+      (Durbin et al., 1998)</a> describes CMs in more detail.
 
- <li> The QDB query-dependent banded dynamic programming algorithm used
-      to increase search speed is described in
-      <a href="http://selab.janelia.org/publications.html#NawrockiEddy07">
-      (Nawrocki and Eddy, 2007)</a>, along with
-      mixture Dirichlet priors and entropy weighting.
+ <li> The tRNA identification program <a href="http://selab.janelia.org/software.html#trnascanse">
+      tRNAscan-SE</a> is based on a tRNA CM and COVE
+      <a href="http://selab.janelia.org/publications.html#LoweEddy97">
+      (Lowe and Eddy, 1997)</a>.
+
+ <li> Covariance models were originally described in
+      <a href="http://selab.janelia.org/publications.html#Eddy94">
+      (Eddy and Durbin, 1994)</a>. They were first implemented
+      in the
+      <a href="http://selab.janelia.org/software.html#cove">
+      COVE</a> software package.
 </ul>      
 
 
@@ -316,7 +328,7 @@ but these are the main mileposts: </p>
  <td align="left">
     <address><a href="http://selab.janelia.org/people/eddys/">Sean Eddy</a></address>
     <!-- hhmts start -->
-Last modified: Sat Oct 24 09:57:56 2009
+Last modified: Fri Oct 30 13:43:01 2009
 <!-- hhmts end -->
  </td>
  <td align="right">  
