@@ -97,36 +97,36 @@ The latest release of Infernal is
 </ul>
 
 
-<h2> Note on the Rfam transition to Infernal 1.0 </h2>
+<!-- <h2> Note on the Rfam transition to Infernal 1.0 </h2> -->
 
-<p>
-The current <a href="http://rfam.janelia.org">Rfam 9.1</a> database is
-build on Infernal 0.81. Rfam models are not currently compatible with
-Infernal 1.0.
+<!-- <p> -->
+<!-- The current <a href="http://rfam.janelia.org">Rfam 9.1</a> database is -->
+<!-- build on Infernal 0.81. Rfam models are not currently compatible with -->
+<!-- Infernal 1.0. -->
 
-<p> We cannot effectively make Infernal 1.0 reverse compatible,
-because Infernal 1.0's model calibration step is new, essential, and
-computationally intensive. That is to say, we could easily have 1.0
-<em>read</em> pre-1.0 model files, but those models would not have
-1.0's capability of calculating E-values until you calibrated the
-models; and if you're going to calibrate the models (which takes
-forever), you might as well build new ones (which takes little time).
+<!-- <p> We cannot effectively make Infernal 1.0 reverse compatible, -->
+<!-- because Infernal 1.0's model calibration step is new, essential, and -->
+<!-- computationally intensive. That is to say, we could easily have 1.0 -->
+<!-- <em>read</em> pre-1.0 model files, but those models would not have -->
+<!-- 1.0's capability of calculating E-values until you calibrated the -->
+<!-- models; and if you're going to calibrate the models (which takes -->
+<!-- forever), you might as well build new ones (which takes little time). -->
 
-<p>At the same time, Rfam cannot instantaneously switch to Infernal
-1.0, because they use curated score thresholds, and with this
-significant code change, they'll need to reexamine all their
-thresholds. We do expect Rfam to adopt Infernal 1.0 in the next
-release.
+<!-- <p>At the same time, Rfam cannot instantaneously switch to Infernal -->
+<!-- 1.0, because they use curated score thresholds, and with this -->
+<!-- significant code change, they'll need to reexamine all their -->
+<!-- thresholds. We do expect Rfam to adopt Infernal 1.0 in the next -->
+<!-- release. -->
 
-<p>In the meantime, if you want to use Infernal 1.0 with Rfam 9.1, we
-have posted a tarball of Rfam 9.1 models built with Infernal 1.0,
-which you can <a
-href="ftp://selab.janelia.org/pub/rfam/rfam-9.1/infernal-1.0rc5-cm.tar.gz">
-download from our FTP site [8.5M, tar.gz]</a>.
+<!-- <p>In the meantime, if you want to use Infernal 1.0 with Rfam 9.1, we -->
+<!-- have posted a tarball of Rfam 9.1 models built with Infernal 1.0, -->
+<!-- which you can <a -->
+<!-- href="ftp://selab.janelia.org/pub/rfam/rfam-9.1/infernal-1.0rc5-cm.tar.gz"> -->
+<!-- download from our FTP site [8.5M, tar.gz]</a>. -->
 
-<p>Alternatively, you can continue using the previous <a
-href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.81.tar.gz">Infernal
-0.81 release</a> for Rfam work until Rfam makes the transition.
+<!-- <p>Alternatively, you can continue using the previous <a -->
+<!-- href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.81.tar.gz">Infernal -->
+<!-- 0.81 release</a> for Rfam work until Rfam makes the transition. -->
 
 
 
@@ -328,7 +328,7 @@ but these are the main mileposts: </p>
  <td align="left">
     <address><a href="http://selab.janelia.org/people/eddys/">Sean Eddy</a></address>
     <!-- hhmts start -->
-Last modified: Thu Dec 16 07:40:18 2010
+Last modified: Sat Mar 19 07:55:38 2011
 <!-- hhmts end -->
  </td>
  <td align="right">  
