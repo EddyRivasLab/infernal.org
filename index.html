@@ -51,8 +51,8 @@ that conserve their secondary structure more than their primary sequence.
 </p>
 <p>
 The latest release of Infernal is
-<a href="ftp://selab.janelia.org/pub/software/infernal/infernal-1.0.2.tar.gz">
-1.0.2 [30 Oct 2009].</a>
+<a href="ftp://selab.janelia.org/pub/software/infernal/infernal-1.1rc1.tar.gz">
+1.1rc1 [27 Jun 2012].</a>
 </p>
 
 
@@ -60,13 +60,13 @@ The latest release of Infernal is
 <h2> Documentation: </h2>
 <ul>
  <li> <a href="ftp://selab.janelia.org/pub/software/infernal/Userguide.pdf">
-      User's Guide [PDF, 109 pages] </a>.
+      User's Guide [PDF, 119 pages] </a>.
 
- <li> <a href="ftp://selab.janelia.org/pub/software/infernal/00README">
+ <li> <a href="ftp://selab.janelia.org/pub/software/infernal/README">
       00README </a>
       from the current release.
 
-  <li> <a href="ftp://selab.janelia.org/pub/software/infernal/00RELEASE">
+  <li> <a href="ftp://selab.janelia.org/pub/software/infernal/RELEASE-NOTES">
       Release notes </a>
       for the current release.
 </ul>
@@ -74,7 +74,7 @@ The latest release of Infernal is
 <h2> Reference: </h2>
 
 <ul>
-  <li> The recommended citation for using Infernal 1.0 software is
+  <li> The recommended citation for using Infernal is
        E. P. Nawrocki, D. L. Kolbe, and S. R. Eddy,
        <a href="http://selab.janelia.org/publications.html#Nawrocki09">
        Infernal 1.0: Inference of RNA alignments </a>,
@@ -86,50 +86,61 @@ The latest release of Infernal is
 
 <ul>
   <li> The current source code distribution:
-       <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-1.0.2.tar.gz">
-       infernal 1.0.2 [tarball, 15.2 MB] </a> <br />
+       <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-1.1rc1.tar.gz">
+       infernal 1.1rc1, source only [tarball, 11.6 MB] </a> <br />
+       Source with binaries:
+       <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-1.1rc1-linux-intel-gcc.tar.gz">
+       infernal 1.1rc1 with Linux/Intel binaries [tarball, 24.2 MB] </a>, 
+       <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-1.1rc1-macosx-intel.tar.gz">
+       infernal 1.1rc1 with MacOSX/Intel binaries [tarball, 24.1 MB] </a> <br />
        Infernal is 
        <a href="ftp://selab.janelia.org/pub/software/infernal/COPYRIGHT">
        freely available </a> under the
        GNU General Public License version 3
        <a href="ftp://selab.janelia.org/pub/software/infernal/LICENSE"> [GPLv3]</a>.
        <p> We welcome code contributions, feature requests, and bug reports. </p>
+
+
 </ul>
 
 
-<!-- <h2> Note on the Rfam transition to Infernal 1.0 </h2> -->
+<h2> Note on the Rfam transition to Infernal 1.1 </h2>
 
-<!-- <p> -->
-<!-- The current <a href="http://rfam.janelia.org">Rfam 9.1</a> database is -->
-<!-- build on Infernal 0.81. Rfam models are not currently compatible with -->
-<!-- Infernal 1.0. -->
+<p>
+The current <a href="http://rfam.sanger.ac.uk">Rfam 10.1</a> database is
+built on Infernal 1.0. This means that CM files from Rfam cannot be
+used directly with Infernal 1.1. If you'd like to use Infernal 1.1 for
+Rfam 10.1 work, you have three options. 
 
-<!-- <p> We cannot effectively make Infernal 1.0 reverse compatible, -->
-<!-- because Infernal 1.0's model calibration step is new, essential, and -->
-<!-- computationally intensive. That is to say, we could easily have 1.0 -->
-<!-- <em>read</em> pre-1.0 model files, but those models would not have -->
-<!-- 1.0's capability of calculating E-values until you calibrated the -->
-<!-- models; and if you're going to calibrate the models (which takes -->
-<!-- forever), you might as well build new ones (which takes little time). -->
+<p>First, you can use the cmconvert program in Infernal 1.1 to convert
+the 1.0 files from Rfam. Second, you can download <a
+href="ftp://selab.janelia.org/pub/rfam/rfam-10.1/Rfam-10.1-infernal-1.1-converted.cm.gz">
+all converted Rfam 10.1 CMs in a single gzipped CM file in 1.1
+format</a>, and use that.  With these first two options, the models
+will be parameterized identically to the 1.0 built Rfam 10.1 models
+available from the Rfam website, so identical hits using the 1.0 and
+1.1 files will have identical bit scores. You'll want to use one of
+these two options if you want to reproduce scores obtained with the
+Infernal 1.0 Rfam files.
 
-<!-- <p>At the same time, Rfam cannot instantaneously switch to Infernal -->
-<!-- 1.0, because they use curated score thresholds, and with this -->
-<!-- significant code change, they'll need to reexamine all their -->
-<!-- thresholds. We do expect Rfam to adopt Infernal 1.0 in the next -->
-<!-- release. -->
+<p>The third option is to download 
+<a href="ftp://selab.janelia.org/pub/rfam/rfam-10.1/Rfam-10.1-infernal-1.1.cm.gz">
+a file with newly built and parameterized Rfam
+10.1 CMs created by Infernal 1.1's cmbuild and cmcalibrate 
+</a>.  These models were built from the Rfam 10.1 seed alignments
+but using Infernal 1.1's parameterization methods. With this third
+option, the models will have slightly different parameters than the
+Infernal 1.0 Rfam 10.1 CM files, so the same hit will likely get a
+different score and E-value using these models compared with using the
+Infernal 1.0 Rfam 10.1 models. However, our benchmarking suggests that
+the new parameterization makes the models slightly more sensitive, so
+you may want to choose this option if you're not worried about
+reproducing Rfam 10.1 bit scores.
 
-<!-- <p>In the meantime, if you want to use Infernal 1.0 with Rfam 9.1, we -->
-<!-- have posted a tarball of Rfam 9.1 models built with Infernal 1.0, -->
-<!-- which you can <a -->
-<!-- href="ftp://selab.janelia.org/pub/rfam/rfam-9.1/infernal-1.0rc5-cm.tar.gz"> -->
-<!-- download from our FTP site [8.5M, tar.gz]</a>. -->
-
-<!-- <p>Alternatively, you can continue using the previous <a -->
-<!-- href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.81.tar.gz">Infernal -->
-<!-- 0.81 release</a> for Rfam work until Rfam makes the transition. -->
-
-
-
+<p>Alternatively, you can continue using the previous <a
+href="ftp://selab.janelia.org/pub/software/infernal/infernal-1.0.2.tar.gz">Infernal
+1.0.2 release</a> for Rfam work until Rfam makes the transition to
+Infernal 1.1.
 
 <h2> Further reference: </h2>
 
@@ -202,6 +213,16 @@ but these are the main mileposts: </p>
 <table>
 <tr> <th width=50px> Release </th>  <th width=100px> Date </th>  <th width=180px> Download </th>  <th> Notes </th> </tr>
 
+<tr> <th> 1.0.2      </th>
+     <td> Oct 2009   </td>
+     <td> <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-1.0.2.tar.gz">
+          [infernal-1.0.2.tar.gz, 15.2 MB] </a>
+     </td>
+     <td> Last release before the major 1.1 update. This was the
+          "current" version for nearly two years.
+     </td>    
+</tr>
+
 <tr> <th> 1.0.1      </th>
      <td> Oct 2009   </td>
      <td> <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-1.0.1.tar.gz">
@@ -229,7 +250,7 @@ but these are the main mileposts: </p>
      <td> <a href="ftp://selab.janelia.org/pub/software/infernal/infernal-0.81.tar.gz">
           [infernal-0.81.tar.gz, 6.5 MB] </a>
      </td>
-     <td> Version used for current Rfam versions (9.1 and earlier).
+     <td> First version with E-values and MPI parallelization.
      </td>    
 </tr>
 
@@ -328,7 +349,7 @@ but these are the main mileposts: </p>
  <td align="left">
     <address><a href="http://selab.janelia.org/people/eddys/">Sean Eddy</a></address>
     <!-- hhmts start -->
-Last modified: Sat Mar 19 07:55:38 2011
+Last modified: Wed Jun 27 21:00:28 2012
 <!-- hhmts end -->
  </td>
  <td align="right">  
