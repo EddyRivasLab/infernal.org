@@ -1,6 +1,5 @@
-WEBHOST  =  selab
-WEBDIR   =  /opt/www/infernal/docs
-TESTDIR  =  /opt/www/people/eddys/infernal
+WEBHOST  =  seddy@96.126.110.11
+WEBDIR   =  /var/www/eddylab.org/public_html/software/infernal/
 
 WEBFILES =  index.html\
 	    infernal.css\
@@ -11,7 +10,4 @@ WEBFILES =  index.html\
 all:
 	scp ${WEBFILES} ${WEBHOST}:${WEBDIR}/
 
-test:
-	ssh ${WEBHOST} mkdir -p ${TESTDIR}
-	scp ${WEBFILES} ${WEBHOST}:${TESTDIR}/
 
