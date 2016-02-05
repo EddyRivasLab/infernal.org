@@ -1,5 +1,5 @@
 WEBHOST  =  seddy@96.126.110.11
-WEBDIR   =  /var/www/eddylab.org/public_html/software/infernal/
+WEBDIR   =  /var/www/eddylab.org/public_html/infernal/
 
 WEBFILES =  index.html\
 	    infernal.css\
